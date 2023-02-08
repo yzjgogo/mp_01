@@ -5,3 +5,5 @@
 
 <view style="background-color: bisque;">动态绑定属性</view>
 <image src="{{imgSrc}}" class="image-attr"></image>
+
+<!-- 测试提交--- -->
