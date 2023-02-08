@@ -1,0 +1,21 @@
+.container1 view{
+  width: 100px;
+  height: 100px;
+  /* 下面两行实现文字垂直和水平都居中 */
+  text-align: center; /*水平居中*/
+  line-height: 100px; /*垂直居中*/
+}
+.container1 view:nth-child(1){
+  background-color: bisque;
+}
+.container1 view:nth-child(2){
+  background-color: cadetblue;
+}
+.container1 view:nth-child(3){
+  background-color: darkorchid;
+}
+/* 使用flex实现水平衡铺 */
+/* .container1{
+  display: flex;
+  justify-content: space-around;
+} */

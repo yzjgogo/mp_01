@@ -1,0 +1,17 @@
+<swiper class="swiper-container" 
+        indicator-dots 
+        indicator-color="#2E8B57"
+        indicator-active-color="#FFA500"
+        autoplay
+        interval="3000"
+        circular>
+  <swiper-item>
+    <view class="item">A</view>
+  </swiper-item>
+  <swiper-item>
+    <view class="item">B</view>
+  </swiper-item>
+  <swiper-item>
+    <view class="item">C</view>
+  </swiper-item>
+</swiper>

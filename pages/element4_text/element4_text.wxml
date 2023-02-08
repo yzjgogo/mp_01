@@ -1,0 +1,11 @@
+
+<!-- 
+  text是文本组件
+  类似于html中的span标签，是一个行内元素
+
+  selectable:可实现长按选中文本内容的效果
+   -->
+<view>
+手机号支持长按选中效果
+<text selectable>18117843721</text>
+</view>

@@ -1,0 +1,24 @@
+<view>
+button是按钮组件，功能比html的button丰富，通过open-type属性可以调用微信提供的各种功能（客服、转发、获取用户授权、获取用户信息等）
+</view>
+
+<view style="background-color: bisque;">通过type指定按钮类型：默认，主色调，警告</view>
+<button>默认按钮</button>
+<button type="primary">主色调按钮</button>
+<button type="warn">警告按钮</button>
+
+<view style="background-color: bisque;">size="mini" 小尺寸按钮</view>
+<button size="mini">默认按钮</button>
+<button size="mini" type="primary">主色调按钮</button>
+<button size="mini" type="warn">警告按钮</button>
+
+<view style="background-color: bisque;">plain 镂空按钮</view>
+<button plain>默认按钮</button>
+<button plain type="primary">主色调按钮</button>
+<button plain type="warn">警告按钮</button>
+
+<button plain size="mini">默认按钮</button>
+<button plain size="mini" type="primary">主色调按钮</button>
+<button plain size="mini" type="warn">警告按钮</button>
+
+

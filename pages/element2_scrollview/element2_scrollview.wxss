@@ -1,0 +1,25 @@
+/* 给每个view一个尺寸，这是实现滚动的前提，因为尺寸不够才可以滚动 */
+.container2 view{
+  width: 400px;
+  height: 100px;
+  text-align: center;
+  line-height: 100px;
+}
+
+/* 分别给每个view一个背景色 方便观察 */
+.container2 view:nth-child(1){
+  background-color: darkorchid;
+}
+.container2 view:nth-child(2){
+  background-color: darksalmon;
+}
+.container2 view:nth-child(3){
+  background-color: deepskyblue;
+}
+
+/* 给scroll-view一个尺寸，当这个尺寸不足以存放所有子view时，就会滚动，这个尺寸必须给 */
+.container2{
+  height: 220px;
+  width: 350px;
+}
+

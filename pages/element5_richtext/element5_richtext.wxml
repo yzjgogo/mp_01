@@ -1,0 +1,7 @@
+
+<!-- 
+  rich-text:富文本组件
+  支持通过nodes属性节点，把html字符串渲染为WXML结构
+-->
+
+<rich-text nodes="<h1 style='color:green;'>我是html标签</h1>"></rich-text>

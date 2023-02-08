@@ -1,0 +1,8 @@
+<!-- scroll-view实现内容的滚动，当内容的高或宽大于scroll-view的高或宽时，只要设置scroll-y或scroll-x就会实现滚动
+因此要给scroll-view和内容具体的尺寸，才知道需不需要滚动 -->
+<scroll-view class="container2" scroll-y scroll-x>
+  <view>A</view>
+  <view>B</view>
+  <view>C</view>
+</scroll-view>
+
