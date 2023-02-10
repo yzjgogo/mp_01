@@ -1,9 +1,33 @@
 <view class="l-title">单击事件tab及事件属性type，target，currentTarget</view>
-<!-- 事件绑定时，事件处理函数无需添加参数、无需添加括号，例如这里不能是outerHandler()，不能是outerHandler(param) -->
+<!-- 
+  事件绑定时，事件处理函数无需添加参数、无需添加括号，例如这里不能是outerHandler()，不能是outerHandler(param)，因为系统会把这个整体识别为一个事件函数，具体如何事件传参参考下面
+ -->
 <view class="outer-view" id="outer-view" bindtap="outerHandler">
   <button type="primary" id="inner-view">按钮</button>
 </view>
 
+
+<view class="l-title">事件传参</view>
+<!-- 
+  事件传参：
+  传参时：data-参数名="参数值";data-myparam="{{10086}}"的参数值是数值类型10086;data-myparam="10086"的参数值是字符串"10086"
+  取参时：在参数处理函数paramHandler(event)里，从event.target.dataset.参数名取
+   -->
+<button bindtap="paramHandler" data-myparam="{{10086}}" type="primary">点击进行事件传参</button>
+
+
 <view class="l-title">在事件处理函数中为data中的数据赋值</view>
 <button type="primary" bindtap="changeData">点击响应式改变data中的一个或多个数据</button>
 <view>{{count}}----{{msg}}</view>
+
+
+<view class="l-title">bindinput事件：响应文本框的输入;以及事件属性detail</view>
+<input bindinput="inputHandler" class="l-input"></input>
+
+
+<!-- 
+  通过Mustache语法将data中的数据绑定到组件上；
+  在事件绑定函数中再将新的数据设置到data中
+-->
+<view class="l-title">文本框和data之间的双向数据绑定</view>
+<input value="{{other}}" bindinput="inputBindHandler" class="l-input"></input>

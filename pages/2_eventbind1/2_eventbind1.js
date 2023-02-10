@@ -21,8 +21,17 @@ Page({
     //currentTarget：当前事件所绑定到的组件，例如这里当前的bindtap事件绑定到outer-view上，因此currentTarget就是外部的outer-view
     console.log(event.currentTarget)
   },
+  /**
+   * 事件去参数
+   */
+  paramHandler(event){
+    console.log(event)
+    console.log(event.target.dataset.myparam)
+  },
+  /**
+   * 响应式的改变data里的数据:this.setData(obj); 传入的对象obj会与原来的data对比，obj里的属性会替换data里相同的属性，data中obj里没有的属性仍然保留
+   */
   changeData(event){
-    // 响应式的改变data里的数据:this.setData(obj); 传入的对象obj会与原来的data对比，obj里的属性会替换data里相同的属性，data中obj里没有的属性仍然保留
     this.setData(
       {
         count:this.data.count+1,
@@ -33,6 +42,22 @@ Page({
     // this.data.count++
     console.log("count改变："+this.data.count)
     console.log(this.data)
+  },
+  /**
+   * 监听input的输入内容:event.detail.value
+   */
+  inputHandler(event){
+    console.log("==============")
+    console.log(event)
+    console.log(event.detail.value)
+  },
+  inputBindHandler(event){
+    this.setData(
+      {
+        other:event.detail.value
+      }
+    )
+    console.log(this.data.other)
   },
 
   /**
