@@ -1,5 +1,6 @@
 {
   "pages":[
+    "pages/2_eventbind1/2_eventbind1",
     "pages/1_databind1/1_databind1",
     "pages/element7_image/element7_image",
     "pages/element6_button/element6_button",

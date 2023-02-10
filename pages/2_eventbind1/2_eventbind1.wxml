@@ -1,0 +1,9 @@
+<view class="l-title">单击事件tab及事件属性type，target，currentTarget</view>
+<!-- 事件绑定时，事件处理函数无需添加参数、无需添加括号，例如这里不能是outerHandler()，不能是outerHandler(param) -->
+<view class="outer-view" id="outer-view" bindtap="outerHandler">
+  <button type="primary" id="inner-view">按钮</button>
+</view>
+
+<view class="l-title">在事件处理函数中为data中的数据赋值</view>
+<button type="primary" bindtap="changeData">点击响应式改变data中的一个或多个数据</button>
+<view>{{count}}----{{msg}}</view>

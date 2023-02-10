@@ -1,9 +1,9 @@
+<view style="background-color: chartreuse;">数据绑定：Mustache语法</view>
+
 <view style="background-color: bisque;">动态绑定内容</view>
 <view>{{info}}</view>
 <view>{{msgList[0].msg+msgList[1].msg}}</view>
 <view>{{randomNum1 >= 5 ? "随机数大于或等于5" : "随机数小于5"}}</view>
 
-<view style="background-color: bisque;">动态绑定属性</view>
+<view style="background-color: bisque;">动态绑定属性，与vue对比(vue是:src)</view>
 <image src="{{imgSrc}}" class="image-attr"></image>
-
-<!-- 测试提交--- -->
