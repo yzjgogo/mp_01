@@ -1,0 +1,28 @@
+<view class="l-title">rpx</view>
+<!-- 
+  小程序不能用前端的rem单位，可以用rpx单位，意义是一样的，
+  小程序定死把屏幕分为750份，即任何屏幕的宽度都是750rpx
+  -->
+<view style="width: 375rpx;background-color: bisque;height: 20px;"></view>
+<view style="width: 750rpx;background-color: coral;height: 20px;"></view>
+
+
+<view class="l-title">样式导入</view>
+<!-- 
+  我们想导入/common/common.wxss这个样式文件：
+  在5_wxss1.wxss导入：@import "/common/common.wxss";
+  common.wxss中定义了类名位my-import-css的类选择器
+   -->
+<view class="my-import-css">我是用来测试样式导入的</view>
+
+
+<view class="l-title">全局样式和局部样式</view>
+<!-- 
+  定义在 app.wxss 中的样式为全局样式，作用于每一个页面。
+  在页面的 .wxss 文件中定义的样式为局部样式，只作用于当前页面。这里的5_wxss1.wxss就是局部样式
+  注意：
+① 当局部样式和全局样式冲突时，根据就近原则，局部样式会覆盖全局样式
+② 当局部样式的权重大于或等于全局样式的权重时，才会覆盖全局的样式
+
+参考图片：怎么看权重.png
+   -->

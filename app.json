@@ -1,5 +1,6 @@
 {
   "pages":[
+    "pages/5_wxss1/5_wxss1",
     "pages/4_listRender1/4_listRender1",
     "pages/3_conditionRender1/3_conditionRender1",
     "pages/2_eventbind1/2_eventbind1",
