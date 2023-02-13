@@ -9,8 +9,7 @@
   box-sizing: border-box;
 } 
 .l-title{
-  margin-top: 5px;
-  margin-bottom: 5px;
+  margin-bottom: 10px;
   background-color: #d0d8e8;
 }
 .l-input{

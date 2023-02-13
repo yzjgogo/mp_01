@@ -1,5 +1,6 @@
 {
   "pages":[
+    "pages/3_conditionRender1/3_conditionRender1",
     "pages/2_eventbind1/2_eventbind1",
     "pages/1_databind1/1_databind1",
     "pages/element7_image/element7_image",

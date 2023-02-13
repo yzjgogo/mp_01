@@ -1,0 +1,37 @@
+<view class="l-title">if,elif,else</view>
+<!-- 
+  需要使用Mustache语法语法来判断条件
+  type定义在data里面
+  在if,elif,else中，只有条件成立的哪一个标签才会真正渲染到页面上，否则页面根本不存在这个标签，并不是通过属性控制的显示隐藏
+  这是与hidden的区别，参考hidden
+
+  参考图片：在调试器中看数据.png
+-->
+<view wx:if="{{type == 1}}">男</view>
+<view wx:elif="{{type == 2}}">女</view>
+<view wx:else>保密</view>
+
+
+
+
+<view class="l-title">block标签</view>
+<!-- 
+  block标签可以包裹多个标签，实际渲染时block不会被渲染，只渲染block里面的标签，类似vue的template标签
+  当然你也可以选择用view标签包裹多个标签，但是实际渲染时这个view标签也会被渲染，这就是区别。
+   -->
+<block wx:if="{{true}}">
+  <view>我是view1</view>
+  <view>我是view2</view>
+</block>
+
+
+<view class="l-title">hidden</view>
+<!-- 
+  hidden 与if,elif,else的区别：
+  通过hidden隐藏时，标签在页面还是存在的，只是通过display属性控制标签的显示隐藏
+  通过if,elif,else隐藏时，标签在页面不存在。
+  参考图片：hidden显示隐藏.png
+   -->
+<view hidden="{{true}}">条件为true时隐藏，条件为false时显示</view>
+
+
