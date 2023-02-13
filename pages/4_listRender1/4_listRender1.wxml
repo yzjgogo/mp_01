@@ -1,0 +1,37 @@
+<view class="l-title">for循环渲染数组和对象</view>
+<!-- 取每一项的索引用'index'变量，取每一项用'item'变量 -->
+<view wx:for="{{mArray}}">
+  索引是：{{index}}；当前项是：{{item}}
+</view>
+<view>------------------------</view>
+<view wx:for="{{mObj}}">
+  属性是：{{index}}；当前属性值是：{{item}}
+</view>
+
+
+<view class="l-title">手动指定索引的变量名 和 当前项的变量名</view>
+<!-- 将'index'变量定义为'idx'变量；将'item'变量定义为'itemName变量' -->
+<view wx:for="{{mArray}}" wx:for-index="idx" wx:for-item="itemName">
+  索引是：{{idx}}；当前项是：{{itemName}}
+</view>
+<view>------------------------</view>
+<view wx:for="{{mObj}}" wx:for-index="propertyName" wx:for-item="propertyValue">
+  属性是：{{propertyName}}；当前属性值是：{{propertyValue}}
+</view>
+
+
+<view class="l-title">for循环给每一项指定key</view>
+<!-- 
+  类似vue的key
+  使用wx:key可以提高性能，如果不适用，调试器->Console会输出警告，
+  本文件前面几个for循环都没有使用key，重新编译你会在Console看到警告输出
+  wx:key不需要Mustache语法
+   -->
+<!-- 使用索引index作为key，如果使用wx:for-index="idx"重新指定了索引名，则需要使用新指定的idx -->
+<view wx:for="{{mObjArray}}" wx:key="index">
+  {{item.name}}
+</view>
+<!-- 使用每一项的某个字段作为key -->
+<view wx:for="{{mObjArray}}" wx:key="id">
+  {{item.name}}
+</view>
