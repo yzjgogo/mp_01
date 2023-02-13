@@ -1,0 +1,14 @@
+<!-- 
+小程序根目录下的 app.json 文件是小程序的全局配置文件。常用的配置项如下：
+① pages
+⚫ 记录当前小程序所有页面的存放路径
+② window
+⚫ 全局设置小程序窗口的外观
+③ tabBar
+⚫ 设置小程序底部的 tabBar 效果
+④ style
+⚫ 是否启用新版的组件样式
+ -->
+ <view style="background-color: coral;">
+  我是内容,这里的内容看pdf
+ </view>
