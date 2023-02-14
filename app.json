@@ -1,5 +1,9 @@
 {
   "pages":[
+    "pages/8_request1/8_request1",
+    "pages/7_tabbar1/7_tabbar1",
+    "pages/7_tabbar2/7_tabbar2",
+    "pages/7_tabbar3/7_tabbar3",
     "pages/6_globalConfig1/6_globalConfig1",
     "pages/5_wxss1/5_wxss1",
     "pages/4_listRender1/4_listRender1",
@@ -24,6 +28,29 @@
     "backgroundColor": "#efefef",
     "backgroundTextStyle":"dark",
     "onReachBottomDistance": 50
+  },
+  "tabBar": {
+    "position": "bottom",
+    "borderStyle": "black",
+    "color": "#000000",
+    "selectedColor": "#008000",
+    "backgroundColor": "#FFFF00",
+    "list": [{
+      "pagePath": "pages/7_tabbar1/7_tabbar1",
+      "text": "首页",
+      "iconPath": "/images/tabs/home.png",
+      "selectedIconPath": "/images/tabs/home-active.png"
+    },{
+      "pagePath": "pages/7_tabbar2/7_tabbar2",
+      "text": "消息",
+      "iconPath": "/images/tabs/message.png",
+      "selectedIconPath": "/images/tabs/message-active.png"
+    },{
+      "pagePath": "pages/7_tabbar3/7_tabbar3",
+      "text": "联系我们",
+      "iconPath": "/images/tabs/contact.png",
+      "selectedIconPath": "/images/tabs/contact-active.png"
+    }]
   },
   "style": "v2",
   "sitemapLocation": "sitemap.json"
