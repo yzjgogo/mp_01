@@ -1,3 +1,6 @@
+<!-- 
+  常用属性，参考pdf文档
+ -->
 <swiper class="swiper-container" 
         indicator-dots 
         indicator-color="#2E8B57"
