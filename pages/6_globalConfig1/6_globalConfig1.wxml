@@ -15,4 +15,7 @@
  -->
  <view style="background-color: coral;">
   我是内容,这里的内容看pdf
+  00_小程序 - 模板与配置.pdf -> “全局配置”单元 和 “页面配置”单元
+
+  7_tabbar1、7_tabbar2、7_tabbar3 都属于“全局配置”单元的内容
  </view>

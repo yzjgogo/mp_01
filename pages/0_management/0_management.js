@@ -1,4 +1,4 @@
-// pages/8_request1/8_request1.js
+// pages/0_management/0_management.js
 Page({
 
   /**
@@ -12,8 +12,7 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad(options) {
-      this.getInfo()
-      this.postInfo()
+
   },
 
   /**
@@ -63,36 +62,5 @@ Page({
    */
   onShareAppMessage() {
 
-  },
-
-  // 发起GET数据请求
-  getInfo(){
-    //wx类似前端的window，也可以省略使用？
-    wx.request({
-      url: 'https://www.escook.cn/api/get',
-      method: 'GET',
-      data: {
-        name: 'zs',
-        age: 20
-      },
-      success: (res) => {
-        console.log(res.data)
-      }
-    })
-  },
-
-  // 发起POST请求
-  postInfo() {
-    wx.request({
-      url: 'https://www.escook.cn/api/post',
-      method: "POST",
-      data: {
-        name: 'ls',
-        age: 33
-      },
-      success: (res) => {
-        console.log(res.data)
-      }
-    })
   }
 })
