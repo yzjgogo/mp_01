@@ -40,7 +40,7 @@ Page({
    * 生命周期函数--监听页面卸载
    */
   onUnload() {
-
+    console.log("7_tabbar2被销毁")
   },
 
   /**
@@ -62,5 +62,22 @@ Page({
    */
   onShareAppMessage() {
 
+  },
+
+  gotoBack(event){
+    wx.navigateBack(
+      {
+        delta:1,
+        success:function(){
+          console.log("执行success")
+        },
+        fail:function(){
+          console.log("执行fail")
+        },
+        complete:function(){
+          console.log("执行complete-无论成功失败都会执行")
+        }
+      }
+    )
   }
 })

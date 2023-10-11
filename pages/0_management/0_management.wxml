@@ -6,4 +6,16 @@
 涉及到小程序后台管理系统的使用，包括人员权限管理、小程序发布、运营数据等
   看 00_小程序 - 起步.pdf
   </view>
+  
+<text style="color: red;">以下navigator相关内容在9_navigator页面导航时再看</text>
+<navigator open-type="navigateBack" delta="1" style="background-color: bisque;">
+<text>
+  navigateBack：\n返回:delta表示要后退的层级，如果为1可以省略不写delta
+  </text>
+</navigator>
+
+
+<view bindtap="gotoBack" style="background-color: yellowgreen;">
+wx.navigateBack：返回
+</view>
 

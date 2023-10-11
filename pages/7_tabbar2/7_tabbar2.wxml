@@ -1,3 +1,29 @@
 <view>
   消息
 </view>
+<text style="color: red;">以下navigator相关内容在9_navigator页面导航时再看</text>
+<navigator open-type="navigateBack" delta="1" style="background-color: cyan;">
+<text>
+  navigateBack：\n某个页面跳转到tabBar页面，tabBar页面无法返回到原页面，因此这个按钮没效果，这也是为什么此时tabBar页面导航栏左上角没有返回按钮，因为一旦跳转到tabbar页面，则其它所有页面都会销毁，即其它页面都会执行onUnload()
+</text>
+</navigator>
+<navigator url="/pages/9_navigator/9_navigator" open-type="navigate" style="background-color: darkgreen;">
+返回:我们可以用navigate跳转到原页面，模拟返回，到原页面后tabbar页面仍然存在没有被销毁且仍然可以返回到tabbar页面，左上角默认有返回按钮
+</navigator>
+<navigator url="/pages/9_navigator/9_navigator" open-type="redirect" style="background-color:yellow;">
+<text>
+  redirect：\n返回:我们可以用redirect跳转到原页面，模拟返回，但此时tabbar页面会被销毁，调用onUnload()，这是redirect的特点：即当前页会被销毁，回到原页面无法返回到tabbar也，因为tabbar已经被销毁
+</text>
+</navigator>
+
+
+
+
+<!-- 
+  
+同样无法用wx.navigateBack返回，可以参考上面用wx.navigateTo和wx.redirectTo间接实现
+wx.navigateBack仍然会执行，调用fail和complete方法
+ -->
+<view bindtap="gotoBack" style="background-color: yellowgreen;">
+wx.navigateBack：返回
+</view>

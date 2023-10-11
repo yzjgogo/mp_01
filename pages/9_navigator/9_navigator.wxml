@@ -1,0 +1,34 @@
+<!--pages/9_navigator/9_navigator.wxml-->
+
+<!-- 
+  参考：https://developers.weixin.qq.com/miniprogram/dev/component/navigator.html
+  还有 exit、reLaunch没有尝试，进上面的官网看看
+  -->
+<text>声明式导航：</text>
+<navigator url="/pages/7_tabbar2/7_tabbar2?name=tab&age=11" open-type="switchTab" style="background-color: burlywood;">
+  <text>
+    switchTab:\n点击跳转到被配置了tabBar的页面，open-type="switchTab"不可以省略，且跳转到的tabbar页面后导航栏左上角没有返回按钮,因为配置了tabbar的页面一旦被打开，其它所有页面都会被销毁。所以无法再返回;\n
+    跳转到tabbar页面，无法传参，因此这里url后面的?name=tab&age=11无效，似乎reLaunch可以传参
+  </text>
+</navigator>
+
+<navigator url="/pages/0_management/0_management?name=man&age=12" open-type="navigate" style="background-color: cyan;">
+  <text>
+  navigate:\n点击跳转到没有配置tabBar的页面，此时open-type="navigate"可以省略不写，且跳转到的目标页面导航栏左上角多了个返回按钮\n；可以在url后面拼上?name=man&age=12传参，在目标页面的onLoad()中接收参数
+  </text>
+</navigator>
+
+<!-- 
+  参考：https://developers.weixin.qq.com/miniprogram/dev/api/route/wx.switchTab.html
+  wx.reLaunch、wx.redirectTo
+   -->
+<text>编程式导航：</text>
+<view bindtap="gotoTabbar" style="background-color: blanchedalmond;">
+wx.switchTab：点击跳转到被配置了tabBar的页面
+</view>
+<view bindtap="gotoNoTabbar" style="background-color: yellowgreen;">
+wx.navigateTo：点击跳转到没有配置tabBar的页面
+</view>
+<view style="background-color: royalblue;">
+  wx.navigateBack：用wx.navigateTo跳转到0_managenment，再去0_managenment看wx.navigateBack的用法
+</view>

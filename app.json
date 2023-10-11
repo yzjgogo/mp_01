@@ -1,15 +1,14 @@
 {
   "pages":[
+    "pages/9_navigator/9_navigator",
     "pages/8_request1/8_request1",
-    "pages/7_tabbar1/7_tabbar1",
-    "pages/7_tabbar2/7_tabbar2",
-    "pages/7_tabbar3/7_tabbar3",
     "pages/6_globalConfig1/6_globalConfig1",
     "pages/5_wxss1/5_wxss1",
     "pages/4_listRender1/4_listRender1",
     "pages/3_conditionRender1/3_conditionRender1",
     "pages/2_eventbind1/2_eventbind1",
     "pages/1_databind1/1_databind1",
+    "pages/0_management/0_management",
     "pages/element7_image/element7_image",
     "pages/element6_button/element6_button",
     "pages/element5_richtext/element5_richtext",
@@ -17,6 +16,9 @@
     "pages/element3_swiper/element3_swiper",
     "pages/element2_scrollview/element2_scrollview",
     "pages/element1_view/element1_view",
+    "pages/7_tabbar1/7_tabbar1",
+    "pages/7_tabbar2/7_tabbar2",
+    "pages/7_tabbar3/7_tabbar3",
     "pages/index/index",
     "pages/logs/logs"
   ],
