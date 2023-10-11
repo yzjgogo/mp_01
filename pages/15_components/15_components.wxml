@@ -1,0 +1,39 @@
+<!--
+创建组件的步骤：
+① 在项目的根目录中，鼠标右键，创建 components -> test 文件夹
+② 在新建的 components -> test 文件夹上，鼠标右键，点击“新建 Component”
+③ 键入组件的名称之后回车，会自动生成组件对应的 4 个文件，后缀名分别为 .js，.json， .wxml 和 .wxss
+
+局部引用组件：
+在当前页的.json中的usingComponents下指定组件my-test1，这个my-test1只可以在当前页被引用
+
+全局引用组件：
+在app.json中的usingComponents下指定组件my-test2，这个my-test2在任何页面都可以被引用
+
+组件和页面的区别
+从表面来看，组件和页面都是由 .js、.json、.wxml 和 .wxss 这四个文件组成的。但是，组件和页面的 .js 与
+.json 文件有明显的不同：
+⚫ 组件的 .json 文件中需要声明 "component": true 属性
+⚫ 组件的 .js 文件中调用的是 Component() 函数，页面的.js文件调用的是Page()函数
+⚫ 组件的事件处理函数需要定义到.js文件的 methods 节点中，页面的事件处理函数直接与data、生命周期函数平级，所谓事件处理函数
+    例如bindtap="doClick"，这个doClick如果在组件中就定义到methods里，如果在页面中就与data平级
+
+组件的样式相关主要点：
+1，有隔离性，各个组件与page的样式互不影响；
+2，app.wxss中的全局样式对组件无效；    
+3，只有 class 选择器会有样式隔离效果，id 选择器、属性选择器、标签选择器不受样式隔离的影响；即在app.wxss或页面.wxss定义的class选择器才对组件无效，其它仍然是有效的；
+4，组件的样式隔离特性可以修改:
+    修改位置1：在组件的.js文件中增加options:{styleIsolation:isolated/apply-shared/shared}
+    或者修改位置2：在组件的.json文件中增加"styleIsolation": "isolated/apply-shared/shared"
+其中，styleIsolation 的可选值：
+isolated:默认值，表示启用样式隔离，在自定义组件内外，使用 class 指定的样式将不会相互影响
+apply-shared：表示页面 wxss 样式将影响到自定义组件，但自定义组件 wxss 中指定的样式不会影响页面
+shared：表示页面 wxss 样式将影响到自定义组件，自定义组件 wxss 中指定的样式也会影响页面和其他设置了 apply-shared 或 shared 的自定义组件
+-->
+<text>pages/15_components/15_components.wxml</text>
+<view></view>
+<!-- my-test1定义在15_components.json中 -->
+<my-test1></my-test1>
+<view></view>
+<!-- my-test2定义在app.json中 -->
+<my-test2></my-test2>

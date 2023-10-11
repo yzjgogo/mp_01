@@ -1,5 +1,6 @@
 {
   "pages":[
+    "pages/15_components/15_components",
     "pages/14_wxs/14_wxs",
     "pages/13_lifecycle/13_lifecycle",
     "pages/12_diy_compile/12_diy_compile",
@@ -58,6 +59,9 @@
       "iconPath": "/images/tabs/contact.png",
       "selectedIconPath": "/images/tabs/contact-active.png"
     }]
+  },
+  "usingComponents": {
+    "my-test2":"/components/test2/test2"
   },
   "style": "v2",
   "sitemapLocation": "sitemap.json"

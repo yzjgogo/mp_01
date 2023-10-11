@@ -34,6 +34,8 @@
     "showES6CompileOption": false,
     "minifyWXML": true,
     "checkSiteMap": true,
+    "ignoreDevUnusedFiles": false,
+    "ignoreUploadUnusedFiles": false,
     "babelSetting": {
       "ignore": [],
       "disablePlugins": [],
