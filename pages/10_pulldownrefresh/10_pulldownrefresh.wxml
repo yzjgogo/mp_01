@@ -1,0 +1,15 @@
+<!--pages/10_pulldownrefresh/10_pulldownrefresh.wxml-->
+
+<!-- 
+  下拉刷新流程：
+  1：在全局的app.json或当前页的.json文件中配置下拉刷新是否启动及其样式：
+  "enablePullDownRefresh": true,
+  "backgroundColor": "#87CEFA",
+  "backgroundTextStyle": "dark"
+
+  2：触发下拉刷新会回调：  onPullDownRefresh()
+    我们可以在该方法中处理逻辑
+
+  3：刷新逻辑处理完后，可以调用wx.stopPullDownRefresh()停止下拉，回弹上去，因为在真机上下拉后，如果不停止，则一直是下拉状态
+   -->
+<button bindtap="countAdd">增加count：{{count}}</button>

@@ -1,0 +1,33 @@
+<!--pages/14_wxs/14_wxs.wxml-->
+<text>
+wxs:就是小程序版本的javascript-es5，语法与javascript-es5很相似，但是不支持javascript-就是小程序版本的javascript-es5，语法与javascript-es5很相似，但是不支持javascript-es6的高级写法。
+在wxml中无法调用页面的.js文件中定义的函数(事件除外，例如bindtap="outerHandler")。
+但是wxml可以像html与javascipt交互那样，与wxs交互。
+在小程序中wxs的典型应用场景就是配合Mustach语法实现过滤器，有点像vue的filters。
+wxs的用法以及与javascript的关系参考图片：wxs-js.jpg
+
+注意：wxs中定义的函数不能作为事件回调函数，例如：bindtap="m2.xxx"这种是错误的
+隔离性指的是 wxs 的运行环境和其他 JavaScript 代码是隔离的。体现在如下两方面：
+① wxs 不能调用 js 中定义的函数
+② wxs 不能调用小程序提供的 AP
+
+性能好
+⚫ 在 iOS 设备上，小程序内的 WXS 会比 JavaScript 代码快 2 ~ 20 倍
+⚫ 在 android 设备上，二者的运行效率无差异
+
+官方参考：
+https://developers.weixin.qq.com/miniprogram/dev/framework/view/wxs/
+语法：https://developers.weixin.qq.com/miniprogram/dev/reference/wxs/     
+</text>
+<view style="background-color: silver;">wxs用法一wxml中内嵌wxs：</view>
+<view>{{m1.toUpper(username)}}</view>
+<!-- wxs代码需要用wxs标签包裹，且要指定module属性值，这个属性值m1就方便让wxml来引用module.exprots出的属性 -->
+<wxs module="m1">
+  module.exports.toUpper = function(str){
+    return str.toUpperCase()
+  }
+</wxs>
+<view style="background-color: silver;">wxs用法二wxml引用外部定义的.wxs文件：</view>
+<view>{{m2.toLower(logo)}}</view>
+<!-- 需要在wxs标签中指定src属性，用来指向.wxs文件，同意需要指定module -->
+<wxs src="../../utils/tools.wxs" module="m2"></wxs>

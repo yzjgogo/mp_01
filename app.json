@@ -1,5 +1,10 @@
 {
   "pages":[
+    "pages/14_wxs/14_wxs",
+    "pages/13_lifecycle/13_lifecycle",
+    "pages/12_diy_compile/12_diy_compile",
+    "pages/11_reachbottom/11_reachbottom",
+    "pages/10_pulldownrefresh/10_pulldownrefresh",
     "pages/9_navigator/9_navigator",
     "pages/8_request1/8_request1",
     "pages/6_globalConfig1/6_globalConfig1",
@@ -26,7 +31,7 @@
     "navigationBarTitleText": "我是导航栏的标题",
     "navigationBarBackgroundColor": "#2b4b6b",
     "navigationBarTextStyle":"white",
-    "enablePullDownRefresh": true,
+    "enablePullDownRefresh": false,
     "backgroundColor": "#efefef",
     "backgroundTextStyle":"dark",
     "onReachBottomDistance": 50

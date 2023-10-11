@@ -1,0 +1,14 @@
+<!--pages/11_reachbottom/11_reachbottom.wxml-->
+<text>pages/11_reachbottom/11_reachbottom.wxml</text>
+<view style="width: 100%;height: 1400rpx;background-color: salmon;"></view>
+
+<!-- 
+  上拉触底事件
+  1，在全局的app.json或当前页的json文件中配置
+  "onReachBottomDistance": 50
+  表示滚动条距离底部多少时触发触底函数
+
+  2，上拉触底距离达到onReachBottomDistance时会触发  onReachBottom()函数
+
+  注意：上拉触底事件不像下拉刷新那样可以配置是否开启，只要上拉达到onReachBottomDistance距离即可
+   -->

@@ -1,0 +1,6 @@
+<!--pages/12_diy_compile/12_diy_compile.wxml-->
+<text>
+自定义编译模式，可以在代码修改重新编译时，只刷新当前页面，不用从第一个page开始
+参考图片：diy_compile.jpg
+
+</text>

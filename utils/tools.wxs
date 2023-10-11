@@ -1,0 +1,8 @@
+function toLower(str){
+  return str.toLowerCase()
+}
+
+// 因为wxs不支持类似es6的语法，所以这里不能用增强写法{toLower}
+module.exports = {
+  toLower:toLower
+}
