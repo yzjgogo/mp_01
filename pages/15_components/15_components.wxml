@@ -29,11 +29,28 @@
 isolated:默认值，表示启用样式隔离，在自定义组件内外，使用 class 指定的样式将不会相互影响
 apply-shared：表示页面 wxss 样式将影响到自定义组件，但自定义组件 wxss 中指定的样式不会影响页面
 shared：表示页面 wxss 样式将影响到自定义组件，自定义组件 wxss 中指定的样式也会影响页面和其他设置了 apply-shared 或 shared 的自定义组件
+
+看data，看components/test1/test1.js
+
+看properties，看components/test1/test1.js
+
+看数据监听器observers，看components/test1/test1.js
+
+看纯数据字段pureDataPattern：https://developers.weixin.qq.com/miniprogram/dev/framework/custom-component/pure-data.html
+
+组件的生命周期，看components/test1/test1.js
+
+组件内部可监听组件所在页面的生命周期，看components/test1/test1.js
+
+插槽：看看components/test1/test1.wxml和components/test1/test1.js 搜索插槽方式1,插槽方式2
 -->
 <text>pages/15_components/15_components.wxml</text>
 <view></view>
-<!-- my-test1定义在15_components.json中 -->
-<my-test1></my-test1>
+<!-- my-test1定义在15_components.json中  max属性是在my-test1定义的属性-->
+<my-test1 max="15">
+  <view slot="slot-one">我是第一个插槽的内容</view>
+  <view slot="slot-two">我是第二个插槽的内容</view>
+</my-test1>
 <view></view>
 <!-- my-test2定义在app.json中 -->
 <my-test2></my-test2>
