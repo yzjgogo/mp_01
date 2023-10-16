@@ -1,4 +1,5 @@
 // components/test1/test1.js
+const myBehavior = require("../../behaviors/my-behavior")
 Component({
   /**
    * 组件的属性列表，用于外部调用该组件处，给组件传递数据
@@ -180,5 +181,6 @@ Component({
     resize:function(){
       console.log("执行组件所在页面回调：resize")
     }
-  }
+  },
+  behaviors:[myBehavior]
 })

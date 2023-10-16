@@ -48,6 +48,15 @@ shared：表示页面 wxss 样式将影响到自定义组件，自定义组件 w
 1：父传子：属性绑定，子组件定义属性，父组件通过属性像子组件传递数据，参考components/test1/test1.js里的properties里的max和address
 2：子传父：事件绑定，子组件发送由父组件定义的事件，搜索“子传父第*步”
 3：父获取子：在父组件中通过selectComponent获取子组件，参考15_components.js里的getChildComponent
+
+behaviors：
+用于实现组件间代码共享的特性，类似于 Vue.js 中的 “mixins”。
+每个 behavior 可以包含一组属性、数据、生命周期函数和方法。组件引用它时，它的属性、数据和方法会被
+合并到组件中。
+每个组件可以引用多个 behavior，behavior 也可以引用其它 behavior。
+behavior 中所有可用的节点，参考图片：behavior可用节点.jpg
+看：/behaviors/my-behavior，components/test1/test1.js里的myBehavior
+同名字段的覆盖和组合规则，参考官方文档：https://developers.weixin.qq.com/miniprogram/dev/framework/custom-component/behaviors.html
 -->
 <text>pages/15_components/15_components.wxml</text>
 <view></view>

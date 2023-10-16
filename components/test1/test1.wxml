@@ -21,5 +21,9 @@
   <slot name="slot-one"></slot>
   <slot name="slot-two"></slot>
   <view>{{address.add}}</view><view></view>
-  <button bindtap="sendDataToParentByEvent" size="mini">通过事件发送数据给父组件</button>
+  <button bindtap="sendDataToParentByEvent" size="mini">通过事件发送数据给父组件</button><view></view>
+  <view>behavior里的属性：{{behaviroProperties}}</view>
+  <view>behavior里的数据：{{behaviorData.name}}</view>
+  <button bindtap="toLog" size="mini">点击调用behavior里的方法</button><view></view>
+
 </view>
