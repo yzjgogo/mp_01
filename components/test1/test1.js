@@ -14,7 +14,11 @@ Component({
       }
     },
     //属性定义方法2：简化的定义方式，只需指定数据类型即可
-    age:Number
+    age:Number,
+    address:{
+      type:Object,
+      value:"default_address"//传过来的不一定是字符串，因为type:Object，传过来什么是什么类型
+    }
   },
 
   /**
@@ -91,6 +95,11 @@ Component({
       this.setData({
         'rgb.b':this.data.rgb.b+5>255?255:this.data.rgb.b+5
       })
+    },
+    // 子传父第3步：在子组件的js中，通过triggerEvent将数据发送出去，其中diyEventName就是在父组件中自定义的，如果不需要传递参数{value:'123456'}可以省略
+    sendDataToParentByEvent(){
+      this.triggerEvent('diyEventName',{value:'123456'})
+      // this.triggerEvent('diyEventName') 如果不需要传递参数，则这样即可
     }
   },
   options:{

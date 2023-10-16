@@ -43,14 +43,22 @@ shared：表示页面 wxss 样式将影响到自定义组件，自定义组件 w
 组件内部可监听组件所在页面的生命周期，看components/test1/test1.js
 
 插槽：看看components/test1/test1.wxml和components/test1/test1.js 搜索插槽方式1,插槽方式2
+
+父子组件之间通信：
+1：父传子：属性绑定，子组件定义属性，父组件通过属性像子组件传递数据，参考components/test1/test1.js里的properties里的max和address
+2：子传父：事件绑定，子组件发送由父组件定义的事件，搜索“子传父第*步”
+3：父获取子：在父组件中通过selectComponent获取子组件，参考15_components.js里的getChildComponent
 -->
 <text>pages/15_components/15_components.wxml</text>
 <view></view>
 <!-- my-test1定义在15_components.json中  max属性是在my-test1定义的属性-->
-<my-test1 max="15">
+<!-- 子传父第2步：在父组件的wxml中，将第1步定义的函数发送出去，其中diyEventName任意取都可以 -->
+<my-test1 max="15" address="{{homeOjb}}" bind:diyEventName="parentEventBack" class="m-test1" id="m-test1-id">
   <view slot="slot-one">我是第一个插槽的内容</view>
   <view slot="slot-two">我是第二个插槽的内容</view>
 </my-test1>
 <view></view>
 <!-- my-test2定义在app.json中 -->
 <my-test2></my-test2>
+
+<button bindtap="getChildComponent" size="mini">在当前父组件中，根据class或id获取目标子组件</button>

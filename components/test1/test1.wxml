@@ -20,4 +20,6 @@
   <!-- <slot></slot> -->
   <slot name="slot-one"></slot>
   <slot name="slot-two"></slot>
+  <view>{{address.add}}</view><view></view>
+  <button bindtap="sendDataToParentByEvent" size="mini">通过事件发送数据给父组件</button>
 </view>
