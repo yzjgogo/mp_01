@@ -1,5 +1,6 @@
 {
   "pages":[
+    "pages/16_npm_vant/16_npm_vant",
     "pages/15_components/15_components",
     "pages/14_wxs/14_wxs",
     "pages/13_lifecycle/13_lifecycle",
@@ -61,8 +62,8 @@
     }]
   },
   "usingComponents": {
-    "my-test2":"/components/test2/test2"
-  },
-  "style": "v2",
+    "my-test2":"/components/test2/test2",
+    "van-button":"@vant/weapp/button/index"
+  },	  
   "sitemapLocation": "sitemap.json"
 }

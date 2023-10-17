@@ -1,0 +1,40 @@
+<!-- 
+    目前，小程序中已经支持使用 npm 安装第三方包，从而来提高小程序的开发效率。但是，在小程序中使用
+npm 包有如下 3 个限制：
+① 不支持依赖于 Node.js 内置库的包
+② 不支持依赖于浏览器内置对象的包
+③ 不支持依赖于 C++ 插件的包
+总结：虽然 npm 上的包有千千万，但是能供小程序使用的包却“为数不多”。
+
+小程序使用npm的步骤：
+1：参考图片npm_init_enter.jpeg进入终端，执行npm init -y命令，初始化项目生成package.json文件，相比npm init命令省去了按回车的操作按默认值生成package.json文件
+参考E:\web\baseWeb\WebpackStudy\03_webpack命令_本地与全局依赖_npm_run_xxx，回顾下npm init的用法
+
+2：参考vant Weapp官方文档的快速上手文档https://youzan.github.io/vant-weapp/#/quickstart，安装vant Weapp.这里我并没有配置步骤三 修改 project.config.json，不确定有没有问题，以后留意下。其中执行“npm i @vant/weapp -S --production”后，会生成node_modules文件夹。
+
+3：生成node_modules后还不能直接饮用第三方的组件，还需要点击“ 工具 -> 构建 npm”，老版本开发者工具还需要“详情 -> 本地设置 -> 勾选'使用npm模块'”，我当前使用的版本没有找到勾选的入口，因此我没管它。构建完成后会生成“miniprogram_npm”文件夹。特别要注意的事，我没每次引入新的第三方组件在工具->构建npm之前，最好把原来的“miniprogram_npm”文件夹删掉，然后“工具 -> 构建 npm”使其重新生成。
+
+4：使用引入的vant组件，以使用vant的button为例，
+    a:在app.json里配置"usingComponents": {"van-button":"@vant/weapp/button/index"}，其中van-button可以任意命名
+    b:在页面的.wxml文件中使用引入的van-button,<van-button type="primary">按钮一</van-button>
+
+5:定制vant组件的样式或vant组件的全局样式，（前提知识，CSS定义变量：https://developer.mozilla.org/zh-CN/docs/Web/CSS/Using_CSS_custom_properties）   
+方式一：从官网找到要修改的样式
+vant Weapp官网 -> 定制主题 -> 样式变量 -> 点击‘配置文件’ -> 进入https://github.com/youzan/vant-weapp/blob/dev/packages/common/style/var.less。这里面列出了vant定义的所有的less变量，我们想修改某个变量需要把其重新定义为css格式的遍历，例如我们想修改@button-primary-background-color: @green;这个变量的颜色值，则可以在app.wxss里这样做：
+page{--button-primary-background-color: #B0C4DE;},其中page是每个页面的根标签，类似html的html标签，表示button-primary-background-color这个变量的作用返回时当前页面。我们看到我们把这个变量less格式的@换成了css格式的--，这样就会覆盖vant原来定义的样式了。
+方式二：通过 调试器 -> Wxml -> Styles看，当前组件用了什么变量等等，参考图片：组件样式查看.jpeg
+我们看到这个组件用到了哪个变量，你想修改这个变量，就像方式一那样在app.wxss里定义page{--button-primary-background-color: #B0C4DE;}即可。
+
+
+小程序API的Promise化实现：
+因为小程序本身不支持Promise的，都是通过回调实现的。例如wx.request(),想实现Promise化，可借助第三方的npm组件miniprogram-api-promise实现，官方网站是：https://www.npmjs.com/package/miniprogram-api-promise
+实现步骤：
+1：npm_init_enter.jpeg进入终端，执行npm install --save miniprogram-api-promise安装miniprogram-api-promise
+2：在app.js文件中引入并执行promisifyAll()以后就可以通过wx.p.xxxx()返回一个Promise了。
+3：使用举例：参考16_npm_vant.js里的getInfo()
+
+     -->
+
+<van-button type="primary">按钮一</van-button>
+<view></view>
+<van-button type="danger" bind:tap="getInfo">获取信息</van-button>
