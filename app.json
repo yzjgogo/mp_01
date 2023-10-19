@@ -1,5 +1,6 @@
 {
   "pages":[
+    "pages/17_mobx/17_mobx",
     "pages/16_npm_vant/16_npm_vant",
     "pages/15_components/15_components",
     "pages/14_wxs/14_wxs",

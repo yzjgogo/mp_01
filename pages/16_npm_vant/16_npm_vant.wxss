@@ -1,1 +1,7 @@
 /* pages/16_npm_vant/16_npm_vant.wxss */
+
+page{
+    
+    --button-primary-background-color: #B0C4DE;
+    --button-danger-border-color: #E6E6FA;
+    }

@@ -1,2 +1,4 @@
-<!--components/test2/test2.wxml-->
-<text class="test-bg">components/test2/test2.wxml</text>
+//在组件中使用store数据4：在组件的wxml里使用步骤“在组件中使用store数据3”中定义的属性
+<view>{{numA}}+{{numB}}={{sum}}</view>
+<van-button type="primary" bindtap="btnHandler2" data-step="{{1}}">numB+1</van-button>
+<van-button type="danger" bindtap="btnHandler2" data-step="{{-1}}">numB-1</van-button>

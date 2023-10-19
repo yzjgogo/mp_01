@@ -19,6 +19,8 @@
   "homepage": "https://github.com/yzjgogo/mp_01#readme",
   "dependencies": {
     "@vant/weapp": "^1.11.1",
-    "miniprogram-api-promise": "^1.0.4"
+    "miniprogram-api-promise": "^1.0.4",
+    "mobx-miniprogram": "^4.13.2",
+    "mobx-miniprogram-bindings": "^2.1.5"
   }
 }

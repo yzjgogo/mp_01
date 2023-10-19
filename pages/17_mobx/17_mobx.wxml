@@ -1,0 +1,29 @@
+<!-- 
+    全局数据共享：类似vue的vuex
+    为了解决组件之间数据共享的问题
+    在小程序中，可使用 mobx-miniprogram 配合 mobx-miniprogram-bindings 实现全局数据共享。其中：
+⚫ mobx-miniprogram 用来创建 Store 实例对象，数据就存储在这里
+⚫ mobx-miniprogram-bindings 用来把 Store 中的共享数据或方法，绑定到组件或页面中使用，可以读写mobx-miniprogram里的数据
+
+步骤一：
+安装Mobx相关的包:mobx-miniprogram 和 mobx-miniprogram-bindings
+npm install --save mobx-miniprogram mobx-miniprogram-bindings
+注意：MobX 相关的包安装完毕之后，记得删除 miniprogram_npm 目录后，重新构建 npm。
+
+步骤二：创建Mobx的Store实例：
+在项目根目录创建store文件夹，在store文件夹里创建store.js，store文件夹和store.js文件名可以任意命名？
+具体看store.js文件里的内容
+
+步骤三：在page中使用store数据
+        搜索：在page中使用store数据*
+
+步骤四：在组件中使用store的数据（看components/test2）
+        搜索：在组件中使用store数据*        
+-->
+<view>----------下面是页面17_mobx使用mobx-----------</view>
+<!-- //在page中使用store数据4：在页面的wxml中使用"在page中使用store数据2"步骤中列出的数据 -->
+<view>{{numA}}+{{numB}}={{sum}}</view>
+<van-button type="primary" bindtap="btnHandler1" data-step="{{1}}">numA + 1</van-button>
+<van-button type="danger" bindtap="btnHandler1" data-step="{{-1}}">numA - 1</van-button>
+<view>-------------下面是组件test2使用mobx-------------</view>
+<my-test2></my-test2>
