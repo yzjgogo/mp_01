@@ -1,0 +1,10 @@
+<!-- 
+    分包：
+    回顾顺序：
+    1，定义分包：app.json -> subpackages,包括普通分包和独立分包
+    2，分包预加载：app.json -> preloadRule
+    3，跳转到分包的页面：pages/7_tabbar1/7_tabbar1.wxml里，点击跳转
+
+    分包主要直接看官网，内容不多且清晰：
+    https://developers.weixin.qq.com/miniprogram/dev/framework/subpackages.html
+     -->

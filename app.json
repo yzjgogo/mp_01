@@ -1,5 +1,9 @@
 {
-  "pages":[
+  "pages":[  
+    "pages/18_subpackage/18_subpackage",
+    "pages/7_tabbar1/7_tabbar1",
+    "pages/7_tabbar2/7_tabbar2",
+    "pages/7_tabbar3/7_tabbar3",
     "pages/17_mobx/17_mobx",
     "pages/16_npm_vant/16_npm_vant",
     "pages/15_components/15_components",
@@ -24,12 +28,42 @@
     "pages/element3_swiper/element3_swiper",
     "pages/element2_scrollview/element2_scrollview",
     "pages/element1_view/element1_view",
-    "pages/7_tabbar1/7_tabbar1",
-    "pages/7_tabbar2/7_tabbar2",
-    "pages/7_tabbar3/7_tabbar3",
     "pages/index/index",
     "pages/logs/logs"
   ],
+  "subpackages":[
+      {
+          "root":"packageA",
+          "name":"pa",
+          "pages":[
+              "pages/cat/cat",
+              "pages/dog/dog"
+            ]
+      },
+      {
+          "root":"packageB",
+          "name":"pb",
+          "pages":[
+              "pages/apple/apple",
+              "pages/banana/banana"
+          ]
+      },
+      {
+          "root":"packageC",
+          "name":"pc",
+          "pages":[
+              "pages/coat/coat",
+              "pages/pants/pants"
+          ],
+          "independent": true
+      }
+  ],
+  "preloadRule": {
+      "pages/7_tabbar3/7_tabbar3":{
+          "network": "all",
+          "packages": ["pb"]
+      }
+  },
   "window":{
     "navigationBarTitleText": "我是导航栏的标题",
     "navigationBarBackgroundColor": "#2b4b6b",

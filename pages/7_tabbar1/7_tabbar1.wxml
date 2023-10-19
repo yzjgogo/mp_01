@@ -1,3 +1,15 @@
 <view>
   首页
 </view>
+
+<navigator url="/packageA/pages/cat/cat" open-type="navigate" style="background-color: cyan;">
+  <text>
+    点击去普通分包“/packageA/pages/cat/cat”
+  </text>
+</navigator>
+
+<navigator url="/packageC/pages/pants/pants" open-type="navigate" style="background-color: blueviolet;">
+  <text>
+    点击去独立分包“/packageC/pages/pants/pants”
+  </text>
+</navigator>
