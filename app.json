@@ -1,10 +1,10 @@
 {
   "pages":[  
-    "pages/18_subpackage/18_subpackage",
+    "pages/17_mobx/17_mobx",
     "pages/7_tabbar1/7_tabbar1",
     "pages/7_tabbar2/7_tabbar2",
     "pages/7_tabbar3/7_tabbar3",
-    "pages/17_mobx/17_mobx",
+    "pages/18_subpackage/18_subpackage",
     "pages/16_npm_vant/16_npm_vant",
     "pages/15_components/15_components",
     "pages/14_wxs/14_wxs",
@@ -74,6 +74,7 @@
     "onReachBottomDistance": 50
   },
   "tabBar": {
+    "custom": true,
     "position": "bottom",
     "borderStyle": "black",
     "color": "#000000",
@@ -98,7 +99,9 @@
   },
   "usingComponents": {
     "my-test2":"/components/test2/test2",
-    "van-button":"@vant/weapp/button/index"
+    "van-button":"@vant/weapp/button/index",
+    "van-tabbar": "@vant/weapp/tabbar/index",
+    "van-tabbar-item": "@vant/weapp/tabbar-item/index"
   },	  
   "sitemapLocation": "sitemap.json"
 }

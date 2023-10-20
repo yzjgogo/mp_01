@@ -8,13 +8,22 @@ Component({
   storeBindings:{
       store,
       fields:{
+          //数据绑定方式1
           numA:()=>store.numA,//其中属性名numA可以任意起名
+          //数据绑定方式2
           numB:(store)=>store.numB,
+          //数据绑定方式3
           sum:'sum'
       },
       actions:{
           updateNumB:'updateNumB'//其中属性名updateNumB可以任意取名
       }
+  },
+  observers:{
+    //在组件中使用store数据6：可以监听步骤“在组件中使用store数据3”中定义的fields，就好像这些fields是当前组件的data一样
+    'numA,numB,sum':function(a,b,new3){
+        console.log("监听来自store的数据的变化：",a,b,new3)
+    }
   },
   properties: {
 

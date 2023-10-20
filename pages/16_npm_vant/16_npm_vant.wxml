@@ -20,8 +20,8 @@ npm 包有如下 3 个限制：
 
 5:定制vant组件的样式或vant组件的全局样式，（前提知识，CSS定义变量：https://developer.mozilla.org/zh-CN/docs/Web/CSS/Using_CSS_custom_properties）   
 方式一：从官网找到要修改的样式
-vant Weapp官网 -> 定制主题 -> 样式变量 -> 点击‘配置文件’ -> 进入https://github.com/youzan/vant-weapp/blob/dev/packages/common/style/var.less。这里面列出了vant定义的所有的less变量，我们想修改某个变量需要把其重新定义为css格式的遍历，例如我们想修改@button-primary-background-color: @green;这个变量的颜色值，则可以在app.wxss里或当前页的。wxss里这样做：
-page{--button-primary-background-color: #B0C4DE;},其中page是每个页面的根标签，类似html的html标签，表示button-primary-background-color这个变量的作用返回时当前页面。我们看到我们把这个变量less格式的@换成了css格式的--，这样就会覆盖vant原来定义的样式了。
+vant Weapp官网 -> 定制主题 -> 样式变量 -> 点击‘配置文件’ -> 进入https://github.com/youzan/vant-weapp/blob/dev/packages/common/style/var.less。这里面列出了vant定义的所有的less变量，我们想修改某个变量需要把其重新定义为css格式的变量，例如我们想修改@button-primary-background-color: @green;这个变量的颜色值，则可以在app.wxss里或当前页的。wxss里这样做：
+page{--button-primary-background-color: #B0C4DE;},其中page是每个页面的根标签，类似html的html标签，表示button-primary-background-color这个变量的作用范围是当前页面。我们看到我们把这个变量less格式的@换成了css格式的--，这样就会覆盖vant原来定义的样式了。
 方式二：通过 调试器 -> Wxml -> Styles看，当前组件用了什么变量等等，参考图片：组件样式查看.jpeg
 我们看到这个组件用到了哪个变量，你想修改这个变量，就像方式一那样在app.wxss里定义page{--button-primary-background-color: #B0C4DE;}即可。
 

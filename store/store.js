@@ -13,5 +13,12 @@ export const store = observable({
     }),
     updateNumB:action(function(step){
         this.numB += step
+    }),
+
+    //下面这些是在讲自定义tabbar(custom-tab-bar/index.js)时用到
+    activeTabBarIndex: 0,
+    updateActiveTabBarIndex: action(function(index) {
+      this.activeTabBarIndex = index
     })
+
 })
