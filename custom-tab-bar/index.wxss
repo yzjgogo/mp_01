@@ -1,0 +1,7 @@
+/* custom-tab-bar/index.wxss */
+/* 
+参考图片：解决红点超出范围的问题.jpg
+ */
+.van-tabbar-item {
+    --tabbar-item-margin-bottom: 0;
+  }
