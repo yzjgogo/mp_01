@@ -103,5 +103,6 @@
     "van-tabbar": "@vant/weapp/tabbar/index",
     "van-tabbar-item": "@vant/weapp/tabbar-item/index"
   },	  
+  "style": "v2",
   "sitemapLocation": "sitemap.json"
 }

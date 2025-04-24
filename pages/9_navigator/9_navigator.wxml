@@ -3,8 +3,9 @@
 <!-- 
   参考：https://developers.weixin.qq.com/miniprogram/dev/component/navigator.html
   还有 exit、reLaunch没有尝试，进上面的官网看看
+
   -->
-<text>声明式导航：</text>
+<text>声明式导航：switchTab、navigate、redirect、navigateBack</text>
 <navigator url="/pages/7_tabbar2/7_tabbar2?name=tab&age=11" open-type="switchTab" style="background-color: burlywood;">
   <text>
     switchTab:\n点击跳转到被配置了tabBar的页面，open-type="switchTab"不可以省略，且跳转到的tabbar页面后导航栏左上角没有返回按钮,因为配置了tabbar的页面一旦被打开，其它所有页面都会被销毁。所以无法再返回;\n
@@ -22,7 +23,7 @@
   参考：https://developers.weixin.qq.com/miniprogram/dev/api/route/wx.switchTab.html
   wx.reLaunch、wx.redirectTo
    -->
-<text>编程式导航：</text>
+<text>编程式导航：wx.switchTab、wx.navigateTo、wx.navigateBack</text>
 <view bindtap="gotoTabbar" style="background-color: blanchedalmond;">
 wx.switchTab：点击跳转到被配置了tabBar的页面
 </view>
